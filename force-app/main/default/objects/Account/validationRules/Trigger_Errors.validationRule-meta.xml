@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_Errors</fullName>
+    <active>false</active>
+    <description>An example rule to trigger failed tests</description>
+    <errorConditionFormula>BillingCity  &lt;&gt;  &quot;New York&quot;</errorConditionFormula>
+    <errorMessage>Billing City is not New York</errorMessage>
+</ValidationRule>

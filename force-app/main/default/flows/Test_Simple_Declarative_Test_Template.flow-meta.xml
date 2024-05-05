@@ -3,8 +3,8 @@
     <assignments>
         <name>Assign_Insert_Failure_Error</name>
         <label>Assign Insert Failure Error</label>
-        <locationX>1370</locationX>
-        <locationY>458</locationY>
+        <locationX>1634</locationX>
+        <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>result</assignToReference>
             <operator>Assign</operator>
@@ -14,33 +14,10 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <name>checkResultList</name>
-        <label>checkResultList</label>
-        <locationX>578</locationX>
-        <locationY>566</locationY>
-        <assignmentItems>
-            <assignToReference>get_Accounts.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Philadelphia</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>get_Accounts.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Demo Account</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>AssertRowCount</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Failure</name>
         <label>Failure</label>
         <locationX>1106</locationX>
-        <locationY>782</locationY>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>result</assignToReference>
             <operator>Assign</operator>
@@ -50,8 +27,60 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <name>Populate_Account</name>
-        <label>Populate Account</label>
+        <name>SetAllBadResult</name>
+        <label>SetAllBadResult</label>
+        <locationX>842</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Name and City don&apos;t match expected values.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>SetBadCityResult</name>
+        <label>SetBadCityResult</label>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>&quot;City name should be Philadelphia&quot;</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>SetBadNameResult</name>
+        <label>SetBadNameResult</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>&quot;Name not equal to Demo Account&quot;</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>SetSuccessResult</name>
+        <label>SetSuccessResult</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Success</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Setup_Account_Data</name>
+        <label>Setup Account Data</label>
         <locationX>578</locationX>
         <locationY>134</locationY>
         <assignmentItems>
@@ -69,78 +98,6 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Setup_Accounts</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>SetAllBadResult</name>
-        <label>SetAllBadResult</label>
-        <locationX>842</locationX>
-        <locationY>782</locationY>
-        <assignmentItems>
-            <assignToReference>result</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Name and City don&apos;t match expected values.</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
-        <name>SetBadCityResult</name>
-        <label>SetBadCityResult</label>
-        <locationX>578</locationX>
-        <locationY>782</locationY>
-        <assignmentItems>
-            <assignToReference>result</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>&quot;City name should be Philadelphia&quot;</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
-        <name>SetBadNameResult</name>
-        <label>SetBadNameResult</label>
-        <locationX>314</locationX>
-        <locationY>782</locationY>
-        <assignmentItems>
-            <assignToReference>result</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>&quot;Name not equal to Demo Account&quot;</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
-        <name>SetSuccessResult</name>
-        <label>SetSuccessResult</label>
-        <locationX>50</locationX>
-        <locationY>782</locationY>
-        <assignmentItems>
-            <assignToReference>result</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Success</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
-        <name>Setup_Accounts</name>
-        <label>Setup Accounts</label>
-        <locationX>578</locationX>
-        <locationY>242</locationY>
-        <assignmentItems>
-            <assignToReference>Name</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>A</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference></assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <connector>
             <targetReference>Insert_Accounts</targetReference>
         </connector>
     </assignments>
@@ -148,7 +105,7 @@
         <name>AssertRowCount</name>
         <label>AssertRowCount</label>
         <locationX>578</locationX>
-        <locationY>674</locationY>
+        <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Failure</targetReference>
         </defaultConnector>
@@ -255,7 +212,6 @@
         <expression>&quot;Error - Account Insert Failed, error returned: &quot; + {!$Flow.FaultMessage}</expression>
     </formulas>
     <interviewLabel>Test Declarative Test Template {!$Flow.CurrentDateTime}</interviewLabel>
-    <isTemplate>true</isTemplate>
     <label>Test Simple Declarative Test Template</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -280,7 +236,7 @@
         <name>Insert_Accounts</name>
         <label>Insert Accounts</label>
         <locationX>578</locationX>
-        <locationY>350</locationY>
+        <locationY>242</locationY>
         <connector>
             <targetReference>get_Accounts</targetReference>
         </connector>
@@ -291,13 +247,16 @@
     </recordCreates>
     <recordLookups>
         <name>get_Accounts</name>
-        <label>get Accounts</label>
+        <label>Get Results</label>
         <locationX>578</locationX>
-        <locationY>458</locationY>
+        <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>checkResultList</targetReference>
+            <targetReference>AssertRowCount</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Assign_Insert_Failure_Error</targetReference>
+        </faultConnector>
         <filters>
             <field>Name</field>
             <operator>EqualTo</operator>
@@ -314,10 +273,10 @@
         <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Populate_Account</targetReference>
+            <targetReference>Setup_Account_Data</targetReference>
         </connector>
     </start>
-    <status>InvalidDraft</status>
+    <status>Draft</status>
     <variables>
         <name>Account</name>
         <dataType>SObject</dataType>
